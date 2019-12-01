@@ -1,0 +1,41 @@
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  font-size: 13px;
+  color: $white;
+  text-transform: uppercase;
+  max-width: 670px+97px+15px;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+
+  &:after {
+    content: "";
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    margin-left: 15px;
+    display: block;
+    background: $white;
+  }
+
+  &:nth-last-child(2) {
+    &:after {
+      content: "";
+      display: none;
+    }
+  }
+}
+
+.nav__item-edge {
+  list-style: none;
+}
+
+.nav__link {
+  text-decoration: none;
+}

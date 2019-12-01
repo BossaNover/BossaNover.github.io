@@ -1,0 +1,24 @@
+// не заданы стили для main-content. Стоит задать? Может, высоту например?
+
+.main-content__container {  
+  @include content-container;
+  height: 100%;  //  почему здесь h100%  и будет ли она работать?  Похоже, не будет.
+}
+
+.main-content__we-do {
+  display: flex;
+  flex-direction: column;
+  padding-left: 11px;
+}
+
+
+.main-content__title {
+  padding: 60px 0 15px;
+}
+
+
+.main-content__title-small {
+  color: $white;
+  line-height: 60px;
+  letter-spacing: -1.63px;
+}

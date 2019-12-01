@@ -1,0 +1,123 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-weight: light; 
+  box-sizing: border-box;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  font-family: $font-text;
+  font-style: normal;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialised;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;  // не понимаю, зачем здесь это, у секции задано 100vh и минимум 650px
+}
+
+.section {
+  min-height: 650px; // почему именно MIN-height?
+  height: 100vh; //  для отображения секции в высоту окна
+}
+
+.main-page {
+  @include background;
+  background-image: url('../img/back/video-bg.png');
+}
+
+.container {
+  margin: 0 auto;
+  width: 940px;
+}
+
+.order-button {
+  @include order-button; 
+  text-decoration: none;
+}
+
+.main-burger {
+  display: flex;
+  align-items: center;
+}
+
+
+.title {
+  font-family: $font-title; 
+  font-size: $f-size_headtitle;
+  color: $orange;
+  line-height: 1;
+  
+  &--color {
+    &--white { 
+      color: $white;
+    }
+    &--black { 
+      color: $black;
+    }
+  }
+
+  &--centered {
+    text-align: center;
+  }
+}
+
+.title-small {
+  font-family: $font-cursivetitle; 
+  font-size: $f-size_cursivetitle;
+  color: $white;
+  line-height: 60px;
+  letter-spacing: -1.63px;
+}
+
+
+.main-scroll {
+  width: 29px;
+  height: 14px;
+  background-image: url('../img/icons/arrow-scroll.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute; 
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(50%);
+  cursor: pointer;
+}
+
+.best {
+  @include background;
+  background-image: url('../img/back/best-bg.png');
+}
+
+.best-header__title {
+  padding: 130px 0 50px;
+}
+
+.btn {
+  @include order-button;
+  background-color: #2f3234;
+  width: 110px;
+}
