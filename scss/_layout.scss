@@ -34,18 +34,13 @@ body {
   height: 100%;
 }
 
-.wrapper {
-  min-height: 100%;  // не понимаю, зачем здесь это, у секции задано 100vh и минимум 650px
-}
+//.wrapper {
+ // min-height: 100%;  // Убрал. Не понимаю, зачем здесь это, у секции задано 100vh и минимум 650px
+//}
 
 .section {
   min-height: 650px; // почему именно MIN-height?
   height: 100vh; //  для отображения секции в высоту окна
-}
-
-.main-page {
-  @include background;
-  background-image: url('../img/back/video-bg.png');
 }
 
 .container {
@@ -53,29 +48,30 @@ body {
   width: 940px;
 }
 
-.order-button {
-  @include order-button; 
-  text-decoration: none;
+.main-page {
+  @include background;
+  background-image: url('../img/back/video-bg.png');
+  position: relative;
 }
 
 .main-burger {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
-
 
 .title {
   font-family: $font-title; 
   font-size: $f-size_headtitle;
-  color: $orange;
+  color: $yellow;
   line-height: 1;
   
   &--color {
     &--white { 
       color: $white;
     }
-    &--black { 
-      color: $black;
+    &--grey { 
+      color: $grey;
     }
   }
 
@@ -91,7 +87,6 @@ body {
   line-height: 60px;
   letter-spacing: -1.63px;
 }
-
 
 .main-scroll {
   width: 29px;
@@ -116,8 +111,4 @@ body {
   padding: 130px 0 50px;
 }
 
-.btn {
-  @include order-button;
-  background-color: #2f3234;
-  width: 110px;
-}
+

@@ -12,17 +12,17 @@
 }
 
 .best-content__icon {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 
   &--padd {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 
 .best-content__item-title {
   font-family: $font-cursivetitle; 
   font-size: $f-size_cursivetitle2;
-  color: $black;
+  color: $grey;
   line-height: 1;
   letter-spacing: -0.6px;
   text-align: center;
@@ -35,7 +35,7 @@
 
 .best-content__text {
   @include text;
-  color: black;
+  color: $grey;
   line-height: 24px;
   opacity: 80%;
   text-align: center;

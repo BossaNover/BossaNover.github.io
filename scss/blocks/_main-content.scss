@@ -1,4 +1,9 @@
 // не заданы стили для main-content. Стоит задать? Может, высоту например?
+.main-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+}
 
 .main-content__container {  
   @include content-container;
@@ -11,11 +16,9 @@
   padding-left: 11px;
 }
 
-
 .main-content__title {
   padding: 60px 0 15px;
 }
-
 
 .main-content__title-small {
   color: $white;

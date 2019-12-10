@@ -1,0 +1,23 @@
+.button {
+  @include button; 
+}
+
+.button--order {
+  text-decoration: none;
+  background-color: $orange;
+
+  &:hover {
+    background-color: $dark-orange;
+  }
+}
+
+.button--review {
+  @include button;
+  background-color: $grey;
+  width: 110px;
+
+  &:hover {
+    background-color: $black;
+  }
+}
+
