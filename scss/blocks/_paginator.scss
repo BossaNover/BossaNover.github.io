@@ -1,5 +1,6 @@
 .paginator {
-  position: absolute;
+  position: fixed; //позволяет показывать пагинацию всегда на одном месте при прокрутке вниз
+  z-index: 9999; //для отображения поверх всех картинок
   top: 90px;
   right: 52px;
 
@@ -11,40 +12,34 @@
   }
 
   &__item {
-    display: flex;
-    position: relative;
-    height: 20px; 
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 }
 
 .paginator__link {
-  position: absolute;
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  height: 6px;
-  width: 6px;
-  background-color: $white;
+  height: 16px;
+  width: 16px;
   border-radius: 50%;
+  border: 1px solid transparent;
+
+  &_active {
+    border: 1px solid $white;
+  }
 
   &::before {
     content: "";
-    position: absolute;
-    box-sizing: border-box;  // почему-то border-box в этом месте не сработал, пришлось специально задать
-    width: 16px;
-    height: 16px;
-    padding: 4px;
+    display: flex;
+    width: 6px;
+    height: 6px;
+    background-color: $white;
     border-radius: 50%;
-    border: 1px solid $white;
-    left: 50%;
-    bottom: -75%;  // методом тыка подобрал 75%
-    transform: translateX(-50%);
   }     
   
-  &:hover:before {
-    border: 1px solid $yellow;
+  &:hover {
+    border: 1px solid $white;
   }
-
 }
 

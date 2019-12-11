@@ -35,7 +35,7 @@ body {
 }
 
 //.wrapper {
- // min-height: 100%;  // Убрал. Не понимаю, зачем здесь это, у секции задано 100vh и минимум 650px
+ // min-height: 100%;  // Убрал. Зачем это? Ни на что не влияет. У секции - 100vh и минимум 650px
 //}
 
 .section {
@@ -58,6 +58,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 11px 68px;
 }
 
 .title {
@@ -105,10 +106,18 @@ body {
 .best {
   @include background;
   background-image: url('../img/back/best-bg.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.best-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .best-header__title {
-  padding: 130px 0 50px;
+  margin-bottom: 50px;
 }
-
-

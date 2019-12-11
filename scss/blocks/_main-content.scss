@@ -2,22 +2,24 @@
 .main-content {
   position: absolute;
   top: 50%;
-  transform: translateY(50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main-content__container {  
   @include content-container;
-  height: 100%;  //  почему здесь h100%  и будет ли она работать?  Похоже, не будет.
+ // height: 100%;  //  почему здесь h100%  и будет ли она работать?  Похоже, не будет. Есть у секции height: 100vh
 }
 
 .main-content__we-do {
   display: flex;
   flex-direction: column;
-  padding-left: 11px;
+  justify-content: center;
 }
 
 .main-content__title {
-  padding: 60px 0 15px;
+  padding-top: 8px;
+  margin-bottom: 35px;
 }
 
 .main-content__title-small {
