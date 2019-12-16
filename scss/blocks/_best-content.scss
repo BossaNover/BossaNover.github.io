@@ -1,6 +1,7 @@
 .best-content__list {
   display: flex;
   justify-content: center;
+  max-width: rem(946px);
 }
 
 .best-content__item {
@@ -8,14 +9,15 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 15px;
+  flex: 1;
+  margin: 0 rem(15px);
 }
 
 .best-content__icon {
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
 
   &--padd {
-    margin-bottom: 40px;
+    margin-bottom: rem(40px);
   }
 }
 
@@ -26,18 +28,17 @@
   line-height: 1;
   letter-spacing: -0.6px;
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: rem(18px);
 
   &--padd {
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
   }
 }
 
 .best-content__text {
   @include text;
   color: $grey;
-  line-height: 24px;
+  line-height: rem(24px);
   opacity: 80%;
   text-align: center;
-  padding: 0 10px;
 }

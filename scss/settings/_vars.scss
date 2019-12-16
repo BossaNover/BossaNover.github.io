@@ -1,5 +1,5 @@
 //devises
-$tablets: 768px;
+$tablets: rem(768px);
 
 //colors
 //base
@@ -8,12 +8,12 @@ $font-title: 'Gagalin', sans-serif;
 $font-cursivetitle: 'Lifehack', sans-serif;
 $font-text: 'Ubuntu','Open Sans', sans-serif; 
 
-$f-size_headtitle: 72px;
-$f-size_cursivetitle: 65px;
-$f-size_wework-title: 61px;
-$f-size_menutitle: 40px;
-$f-size_cursivetitle2: 24px;
-$f-size_text: 14px;
+$f-size_headtitle: rem(72px);
+$f-size_cursivetitle: rem(65px);
+$f-size_wework-title: rem(61px);
+$f-size_menutitle: rem(40px);
+$f-size_cursivetitle2: rem(24px);
+$f-size_text: rem(14px);
 
 $yellow: #f9b43b;
 $orange: #e45028;
@@ -22,4 +22,4 @@ $white: #fff;
 $grey: #2f3234;
 $black: #1f2122;
 
-$container: 960px;
+$container: rem(960px);

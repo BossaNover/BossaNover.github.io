@@ -1,0 +1,45 @@
+.team {
+  @include background;
+  background-image: url('../../img/back/team.png');
+  background-position: center center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team__container {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #2f3234;
+  opacity: 93%;
+}
+
+.team__trigger {
+  text-decoration: none;
+}
+
+.team__trigger-text {
+  font-family: $font-title; 
+  font-size: $f-size_text;
+  text-transform: uppercase;
+  color: $white;
+  line-height: 1;
+}
+
+.team__content-picture {
+  //@include background;
+  //background-image: url('../../img/content/aphex.png');
+  height: rem(100px);
+  width: rem(100px);
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.team__content-pic {
+  object-fit: cover;
+}

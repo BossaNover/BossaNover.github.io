@@ -39,7 +39,7 @@
   left: 0;
   right: 0;
   background-color: rgba(20,20,20, 0.7);
-  padding: 50px 19px;
+  padding: rem(50px) rem(19px);
   transition: opacity .4s;
 }
 
@@ -47,11 +47,11 @@
   font-family: $font-title;
   font-size: $f-size_text;
   color: $white;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .reviews__text {
   @include text;
-  line-height: 24px;
-  margin-bottom: 10px;
+  line-height: rem(24px);
+  margin-bottom: rem(10px);
 }

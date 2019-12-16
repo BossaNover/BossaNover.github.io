@@ -1,8 +1,8 @@
 .paginator {
   position: fixed; //позволяет показывать пагинацию всегда на одном месте при прокрутке вниз
   z-index: 9999; //для отображения поверх всех картинок
-  top: 90px;
-  right: 52px;
+  top: rem(90px);
+  right: rem(52px);
 
   &__list {
     display: flex;
@@ -20,8 +20,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 16px;
-  width: 16px;
+  height: rem(16px);
+  width: rem(16px);
   border-radius: 50%;
   border: 1px solid transparent;
 

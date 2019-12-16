@@ -14,7 +14,7 @@
 .button--review {
   @include button;
   background-color: $grey;
-  width: 110px;
+  width: rem(110px);
 
   &:hover {
     background-color: $black;

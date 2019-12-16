@@ -1,16 +1,23 @@
 .header {
+  //width: 100%; //Ольга выставила такую ширину, не объяснила, зачем.
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  padding-top: 12px;
+  padding-top: rem(12px);
+  max-width: rem(754px)+rem(97px)+rem(92px);
 }
 
 .header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-between-wrap;
+  width: rem(940px); //не знаю как задать ширину
 }
 
 .header__wrapper {
-  margin-left: 69px;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__button {
+  display: inline-block;
 }
