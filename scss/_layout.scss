@@ -67,6 +67,11 @@ ul li {
   max-width: rem(940px);
 }
 
+.logo {
+  width: rem(92px); 
+  height: rem(69px);
+}
+
 .main-page {
   @include background;
   background-image: url('../img/back/video-bg.png');

@@ -442,6 +442,11 @@ ul li {
   max-width: 58.75rem;
 }
 
+.logo {
+  width: 5.75rem;
+  height: 4.3125rem;
+}
+
 .main-page {
   background-repeat: no-repeat;
   background-size: cover;
