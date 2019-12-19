@@ -1,0 +1,41 @@
+.contacts {
+  position: relative;
+
+  &__map {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__footer {
+    @include background;
+    background-image: url('../../img/back/chalkboard_texture_small.png');
+    height: rem(60px);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &__footer-container {
+    @include flex-between;
+    height: 100px;
+  }
+
+
+  &__footer-left {
+    @include flex-between;
+    flex-direction: column;
+    height: 100%;
+  }
+
+
+  &__social-list {
+    height: 100%;
+    @include flex-center;
+  }
+
+
+}

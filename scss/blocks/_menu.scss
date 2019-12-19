@@ -1,0 +1,90 @@
+.menu {
+  @include background;
+  background-image: url('../../img/back/burgers_bk.png');
+  position: relative;
+  display: flex;
+  justify-content: flex-end; //выравниваем аккордеон по правому краю
+
+  &__title {
+    position: absolute;
+    top: rem(110px);
+    left: rem(100px);
+  }
+
+  &__list, &__item, &__content {
+    height: 100%;
+  }
+
+  &__list, &__item {
+    display: flex;
+  }
+
+  &__trigger {
+    width: rem(80px);
+    @include background;
+    position: relative;
+    display: flex;
+    align-items: flex-end; //так мы задвигаем текст заголовка вниз
+      
+    &-title {
+      position: relative;
+      font-family: $font-title;
+      font-size: $f-size_menutitle;
+      color: $white;
+      transform: rotate(-90deg); // поворот текста на -90гр. при этом сбиваются оси.
+      white-space: nowrap; // убираем пробелы между словами и делаем в одну строку
+      height: rem(80px); // так мы загоняем текст в узкое поле
+      transform-origin: 0 0; // так мы загоняем текст в узкое поле
+      display: flex;
+      align-items: center; // для выравнивания текста по центру, задается НЕ родителю!
+      position: relative;  //немного сдвигаем ниже текст, по макету
+      bottom: rem(-33px); //немного сдвигаем ниже текст, по макету
+    }
+
+    &:before  {         // создаем фон -затемнение на картинку-бэкграунд
+      content: '';
+      position: absolute; // на триггер вешаем relative
+      height: 100%;  //растягиваем на высоту и ширину родителя
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex; // чтобы сделать элемент блочным, чтоб он имел высоту и ширину (before по умолч. -строчный)
+      background: rgba(20, 20, 20, 0.7);
+    }
+  }
+ 
+  &__content-wrap {
+    overflow: hidden; // чтобы справа за границами секций не вылезало
+    width: 0; //здесь дучше width, а не max-width. При открываении будет 540px
+    transition: .5s; // для плавности открывани и закрывания
+  }
+
+  &__content {
+  padding: rem(62px) rem(35px);
+  background: rgba(#2f3234, 0.93);
+  }
+
+  &__item:hover {
+    .menu__content-wrap {
+      width: 540px;
+    }
+
+    .menu__trigger-title {
+      color: $yellow;
+    }
+  }
+}
+
+.menu__content {
+  padding: rem(62px) rem(35px);
+  background: rgba(#2f3234, 0.93);
+  min-width: rem(540px)  // делаем ширину на текст, чтобы он не перестраивался при открывании секции. Почему min?
+}
+
+
+
+.menu__desc {
+  font-family: $font-text;
+  font-size: $f-size_text;
+  color: $white;
+}

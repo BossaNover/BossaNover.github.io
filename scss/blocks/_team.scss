@@ -1,45 +1,109 @@
 .team {
   @include background;
   background-image: url('../../img/back/team.png');
-  background-position: center center;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  &__container {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #2f3234;
+    opacity: 93%;
+    padding: 113px 97px;
+  }
+
+  &__header {
+    margin-bottom: rem(40px);
+  }
+
+  &__accordeon-trigger {
+    //margin-bottom: rem(17px); это почему-то не работает!!
+    position: relative;
+
+    &:before {
+      content: '';
+      background-image: url('../../img/icons/Polygon_1.svg');
+      background-repeat: no-repeat;
+      background-size: center;
+      position: absolute;
+      width: rem(9px);
+      height: rem(7px);
+      position: absolute;
+      top: rem(7px);
+      left: rem(-20px);
+    }
+  }
+
+  &__trigger-title {
+    font-family: $font-title;
+    font-size: $f-size_text;
+    color: $white;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 3.7;  // !!! специально поставил 3, т.к. по-другому не получается сделать отступ !!!
+  }
 }
 
-.team__container {
-  position: absolute;
-  width: 50%;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #2f3234;
-  opacity: 93%;
-}
+.team {
+  
+  &__accordeon {
 
-.team__trigger {
-  text-decoration: none;
-}
+    &-item {
+      padding-left: 20px;
+    }
 
-.team__trigger-text {
-  font-family: $font-title; 
-  font-size: $f-size_text;
-  text-transform: uppercase;
-  color: $white;
-  line-height: 1;
-}
+    &-item:hover {
+      .team__accordeon-contentwrap {
+      height: rem(100px);
+      }
+      .team__accordeon-trigger:before {
+      content: '';
+      transform: rotate(180deg);
+      }
+      .team__trigger-title {
+        color: $yellow;
+      }
+    }
 
-.team__content-picture {
-  //@include background;
-  //background-image: url('../../img/content/aphex.png');
-  height: rem(100px);
-  width: rem(100px);
-  border-radius: 50%;
-  overflow: hidden;
-  text-align: center;
-}
+    &-contentwrap {
+      height: 0;
+      overflow: hidden; // чтобы за границами секций не вылезало
+     //height: 0; //здесь дучше height, а не max-height. При открываении будет 95px
+      transition: .4s; // для плавности открывани и закрывания
+    
+    }
 
-.team__content-pic {
-  object-fit: cover;
+    &-content {
+      display: flex;
+    }
+
+    &-picture {
+      @include flex-center;
+      height: rem(100px);
+      width: rem(100px);
+      margin-right: rem(21px);
+    }
+   
+    &-textwrap {
+      max-width: rem(208px);
+    }
+
+    &-position {
+      font-family: $font-text; 
+      font-size: $f-size_text;
+      color: $white;
+      font-weight: 700;
+      margin-bottom: rem(12px);
+    }
+  
+    &-desc {
+      font-family: $font-text; 
+      font-size: $f-size_text;
+      color: $white;
+      font-weight: 300;
+      line-height: rem(24px);
+    }
+  }
 }

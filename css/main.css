@@ -421,6 +421,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 img {
@@ -442,16 +443,10 @@ ul li {
   max-width: 58.75rem;
 }
 
-.logo {
-  width: 5.75rem;
-  height: 4.3125rem;
-}
-
 .main-page {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  position: relative;
   background-image: url("../img/back/video-bg.png");
   position: relative;
 }
@@ -505,7 +500,6 @@ ul li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -521,6 +515,127 @@ ul li {
 
 .best-header__title {
   margin-bottom: 3.125rem;
+}
+
+.address {
+  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.phone__icon {
+  width: 0.75rem;
+  height: 0.6875rem;
+  margin-right: 0.625rem;
+}
+.phone__digits {
+  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #e45028;
+}
+
+.vk__icon {
+  width: 23px;
+  height: 13px;
+  opacity: 0.3;
+}
+
+.facebook__icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+}
+
+.instagram__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.twitter__icon {
+  width: 20px;
+  height: 16px;
+}
+
+.logo {
+  width: 5.75rem;
+  height: 4.3125rem;
+}
+
+.drops {
+  width: 28.1875rem;
+  height: 15.0625rem;
+}
+
+.arrow-scroll {
+  width: 1.8125rem;
+  height: 0.875rem;
+}
+
+.meat {
+  width: 6.0625rem;
+  height: 5.5625rem;
+}
+
+.hand {
+  width: 4.5625rem;
+  height: 5.3125rem;
+}
+
+.natural {
+  width: 5.5rem;
+  height: 4.6875rem;
+}
+
+.burger {
+  width: 2.875rem;
+  height: 2.75rem;
+}
+
+.kkal {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.map-marker {
+  width: 2.875rem;
+  height: 3.5625rem;
+}
+
+.button {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 0.9375rem;
+}
+
+.button--order {
+  text-decoration: none;
+  background-color: #e45028;
+}
+.button--order:hover {
+  background-color: #c1401e;
+}
+
+.button--review {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 0.9375rem;
+  background-color: #2f3234;
+  width: 6.875rem;
+}
+.button--review:hover {
+  background-color: #1f2122;
 }
 
 .header {
@@ -706,6 +821,178 @@ ul li {
   text-align: center;
 }
 
+.team {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("../../img/back/team.png");
+  position: relative;
+}
+.team__container {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #2f3234;
+  opacity: 93%;
+  padding: 113px 97px;
+}
+.team__header {
+  margin-bottom: 2.5rem;
+}
+.team__accordeon-trigger {
+  position: relative;
+}
+.team__accordeon-trigger:before {
+  content: "";
+  background-image: url("../../img/icons/Polygon_1.svg");
+  background-repeat: no-repeat;
+  background-size: center;
+  position: absolute;
+  width: 0.5625rem;
+  height: 0.4375rem;
+  position: absolute;
+  top: 0.4375rem;
+  left: -1.25rem;
+}
+.team__trigger-title {
+  font-family: "Gagalin", sans-serif;
+  font-size: 0.875rem;
+  color: #fff;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 3.7;
+}
+
+.team__accordeon-item {
+  padding-left: 20px;
+}
+.team__accordeon-item:hover .team__accordeon-contentwrap {
+  height: 6.25rem;
+}
+.team__accordeon-item:hover .team__accordeon-trigger:before {
+  content: "";
+  transform: rotate(180deg);
+}
+.team__accordeon-item:hover .team__trigger-title {
+  color: #f9b43b;
+}
+.team__accordeon-contentwrap {
+  height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.team__accordeon-content {
+  display: flex;
+}
+.team__accordeon-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6.25rem;
+  width: 6.25rem;
+  margin-right: 1.3125rem;
+}
+.team__accordeon-textwrap {
+  max-width: 13rem;
+}
+.team__accordeon-position {
+  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.team__accordeon-desc {
+  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+.menu {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("../../img/back/burgers_bk.png");
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.menu__title {
+  position: absolute;
+  top: 6.875rem;
+  left: 6.25rem;
+}
+.menu__list, .menu__item, .menu__content {
+  height: 100%;
+}
+.menu__list, .menu__item {
+  display: flex;
+}
+.menu__trigger {
+  width: 5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.menu__trigger-title {
+  position: relative;
+  font-family: "Gagalin", sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  height: 5rem;
+  transform-origin: 0 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: -2.0625rem;
+}
+.menu__trigger:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  background: rgba(20, 20, 20, 0.7);
+}
+.menu__content-wrap {
+  overflow: hidden;
+  width: 0;
+  transition: 0.5s;
+}
+.menu__content {
+  padding: 3.875rem 2.1875rem;
+  background: rgba(47, 50, 52, 0.93);
+}
+.menu__item:hover .menu__content-wrap {
+  width: 540px;
+}
+.menu__item:hover .menu__trigger-title {
+  color: #f9b43b;
+}
+
+.menu__content {
+  padding: 3.875rem 2.1875rem;
+  background: rgba(47, 50, 52, 0.93);
+  min-width: 33.75rem;
+}
+
+.menu__desc {
+  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #fff;
+}
+
 .reviews__header {
   display: none;
 }
@@ -760,86 +1047,45 @@ ul li {
   margin-bottom: 0.625rem;
 }
 
-.team {
+.contacts {
+  position: relative;
+}
+.contacts__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+.contacts__footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  position: relative;
-  background-image: url("../../img/back/team.png");
-  background-position: center center;
-  position: relative;
+  background-image: url("../../img/back/chalkboard_texture_small.png");
+  height: 3.75rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.contacts__footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.contacts__footer-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.contacts__social-list {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.team__container {
-  position: absolute;
-  width: 50%;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #2f3234;
-  opacity: 93%;
-}
-
-.team__trigger {
-  text-decoration: none;
-}
-
-.team__trigger-text {
-  font-family: "Gagalin", sans-serif;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  color: #fff;
-  line-height: 1;
-}
-
-.team__content-picture {
-  height: 6.25rem;
-  width: 6.25rem;
-  border-radius: 50%;
-  overflow: hidden;
-  text-align: center;
-}
-
-.team__content-pic {
-  object-fit: cover;
-}
-
-.button {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  padding: 0.75rem 0.9375rem;
-}
-
-.button--order {
-  text-decoration: none;
-  background-color: #e45028;
-}
-.button--order:hover {
-  background-color: #c1401e;
-}
-
-.button--review {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  padding: 0.75rem 0.9375rem;
-  background-color: #2f3234;
-  width: 6.875rem;
-}
-.button--review:hover {
-  background-color: #1f2122;
 }
 
 /*# sourceMappingURL=main.css.map */
