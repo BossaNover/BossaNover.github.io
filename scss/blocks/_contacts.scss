@@ -37,5 +37,11 @@
     @include flex-center;
   }
 
+  &__social-item {
+    margin-right: rem(20px);
+    @include flex-center;
+  }
+
+
 
 }

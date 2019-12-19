@@ -539,23 +539,27 @@ ul li {
 .vk__icon {
   width: 23px;
   height: 13px;
+  fill: #585858;
   opacity: 0.3;
 }
 
 .facebook__icon {
   width: 20px;
   height: 20px;
+  fill: #585858;
   opacity: 0.3;
 }
 
 .instagram__icon {
   width: 20px;
   height: 20px;
+  fill: #585858;
 }
 
 .twitter__icon {
   width: 20px;
   height: 16px;
+  fill: #585858;
 }
 
 .logo {
@@ -1083,6 +1087,12 @@ ul li {
 }
 .contacts__social-list {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contacts__social-item {
+  margin-right: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
