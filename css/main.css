@@ -1133,6 +1133,17 @@ ul li {
   top: 6.875rem;
   left: 6.25rem;
 }
+@media screen and (max-width: 768px) {
+  .menu__title {
+    left: 1.375rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu__title {
+    top: 2.9375rem;
+    left: 3.75rem;
+  }
+}
 .menu__list, .menu__item, .menu__content {
   height: 100%;
 }
@@ -1237,6 +1248,15 @@ ul li {
   padding: 3.125rem 1.1875rem;
   transition: opacity 0.4s;
 }
+@media screen and (max-width: 768px) {
+  .reviews__hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 .reviews__name {
   font-family: "Gagalin", sans-serif;
@@ -1253,6 +1273,11 @@ ul li {
   line-height: 1.5rem;
   margin-bottom: 0.625rem;
 }
+@media screen and (max-width: 480px) {
+  .reviews__text {
+    display: none;
+  }
+}
 
 .form {
   background-repeat: no-repeat;
@@ -1263,6 +1288,11 @@ ul li {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .form {
+    align-items: flex-start;
+  }
+}
 .form__container {
   display: flex;
   justify-content: center;
@@ -1270,19 +1300,60 @@ ul li {
   flex-direction: column;
 }
 .form__title {
-  margin-bottom: 5%;
+  margin: -5% 0 5%;
+}
+@media screen and (max-width: 768px) {
+  .form__title {
+    margin: 19% 0 7%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 .form__elem {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .form__elem {
+    flex-direction: column;
+    padding: 0 18%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form__elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}
 .form__left {
   flex: 1;
   padding-right: 1%;
 }
+@media screen and (max-width: 768px) {
+  .form__left {
+    padding-right: 0;
+  }
+}
 .form__right {
   flex: 1;
   padding-left: 1%;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .form__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 .form__left-row {
   display: flex;
@@ -1293,16 +1364,46 @@ ul li {
 }
 .form__right-row {
   margin-bottom: 3%;
+  width: 100%;
 }
 .form__right-row:last-child {
   margin-bottom: 0;
+}
+.form__right-row--tablets {
+  margin: 6% 0 8%;
+}
+@media screen and (max-width: 480px) {
+  .form__right-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
 }
 .form__left-block {
   flex: 1;
   margin-right: 5%;
 }
+@media screen and (max-width: 480px) {
+  .form__left-block {
+    margin-right: 2.5%;
+  }
+}
 .form__left-block:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 480px) {
+  .form__left-block:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form__left-block--hidden {
+    display: none;
+  }
+}
+.form__right-block {
+  width: 100%;
 }
 .form__block-title, .form__input {
   font-family: "Ubuntu", "Open Sans", sans-serif;
@@ -1326,14 +1427,6 @@ ul li {
 }
 .form__input:focus {
   border-color: #f9b43b;
-}
-
-.check {
-  display: flex;
-  align-items: center;
-}
-.check__checkbox {
-  margin-right: 0.625rem;
 }
 
 .form__options {
@@ -1378,6 +1471,39 @@ ul li {
 }
 
 .option__radio:checked ~ .option__visible > .option__visible-inner {
+  display: inline-block;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+}
+.check__checkbox {
+  display: none;
+  cursor: pointer;
+}
+.check__visible {
+  height: 0.9375rem;
+  width: 0.9375rem;
+  border-radius: 2px;
+  background: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.625rem;
+}
+.check__visible-inner {
+  display: none;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background-image: url("../../img/icons/checkmark.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.check__checkbox:checked ~ .check__visible > .check__visible-inner {
   display: inline-block;
 }
 

@@ -41,6 +41,12 @@
   background-color: rgba(20,20,20, 0.7);
   padding: rem(50px) rem(19px);
   transition: opacity .4s;
+
+  @include tablets {
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .reviews__name {
@@ -54,4 +60,8 @@
   @include text;
   line-height: rem(24px);
   margin-bottom: rem(10px);
+
+  @include phones {
+    display: none;
+  }
 }

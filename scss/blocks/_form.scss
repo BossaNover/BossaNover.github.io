@@ -3,28 +3,63 @@
   background-image: url('../../img/back/bg-texture.png'), url('../../img/back/chalkboard_texture.png');
   @include flex-center;
 
+  @include tablets {
+    align-items: flex-start;
+  } 
+
   &__container {
     @include flex-center;
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   &__title {
-    margin-bottom: 5%;
+    margin: -5% 0 5%;
+
+    @include tablets {
+      margin: 19% 0 7%;
+    } 
+
+    @include phones {
+      @include flex-center;
+      text-align: center;
+    } 
   }
 
   &__elem {
     display: flex;
     justify-content: center;
+
+    @include tablets {
+      flex-direction: column;
+      padding: 0 18%;
+    }
+
+    @include phones {
+      @include flex-center;
+      padding: 0;
+    } 
+
   }
 
   &__left {
     flex: 1;
     padding-right: 1%;
+    
+    @include tablets {
+      padding-right: 0;
+    }
   }
 
   &__right {
     flex: 1;
     padding-left: 1%;
+    width: 100%;
+
+    @include phones {
+      @include flex-center;
+      flex-direction: column;
+    }
+
   } 
 
   &__left-row {
@@ -37,17 +72,46 @@
 
   &__right-row {
     margin-bottom: 3%;
+    width: 100%;
+    
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &--tablets {
+      margin: 6% 0 8%;
+    }
+
+    @include phones {
+      @include flex-center;
+      flex: 1;
     }
   }
 
   &__left-block {
     flex: 1;
     margin-right: 5%;
+    
+    @include phones {
+      margin-right: 2.5%;
+    }
+    
     &:last-child {
       margin-right: 0;
+      @include phones {
+        margin-right: 0;
+      }
     }
+
+    &--hidden {
+      @include phones {
+        display: none;
+      }
+    }
+  }
+
+  &__right-block {
+    width: 100%;
   }
 
   &__block-title, &__input {
@@ -73,19 +137,8 @@
     &:focus {
       border-color: $yellow;
     }
-
   }
 }
-
-.check {
-  display: flex;
-  align-items: center;  
-
-  &__checkbox {
-    margin-right: rem(10px);
-  }
-}
-
 
 .form__options {
   display: flex;
@@ -127,6 +180,40 @@
   display: inline-block;
 }
 
+.check {
+  display: flex;
+  align-items: center;  
+
+  &__checkbox {
+    display: none;
+    cursor: pointer;
+  }
+
+  &__visible {
+    height: rem(15px);
+    width: rem(15px);
+    border-radius: 2px;
+    background: $white;
+    border: none;
+    @include flex-center;
+    margin-right: rem(10px);
+
+    &-inner {
+      display: none;
+      width: rem(7px);
+      height: rem(7px);
+      border-radius: 50%;
+      background-image: url('../../img/icons/checkmark.png');
+      @include background;
+    }
+  }
+
+  &__checkbox:checked ~ .check__visible>.check__visible-inner {
+    display: inline-block;
+  }
+}
+
+
 .form__button, .form__clear-btn {
   display: inline-block;
 }
@@ -139,4 +226,3 @@
   all: unset;
   @include text;
 }
-
