@@ -46,6 +46,11 @@
             <div class="header__button">
               <a href="#" class="button button--order">Заказать</a>
             </div>
+            <div class="hamburger-menu">
+              <a href="#" class="hamburger-menu-link">
+                <div class="hamburger-menu-link__bars"></div>
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -57,12 +62,16 @@
           </div>
           <div class="main-content__we-do">
             <div class="title main-content__title">Мы делаем</div>
-            <h1 class="title-small main-content__title-small">натуральные бургеры</h1>
+            <h1 class="title-small main-content__title-small">натуральные <br>бургеры</h1>
           </div>
         </div>
       </div>
       <div class="main-scroll">
-        <a href="#" class="scroll-btn" aria-label="Прокрутка на следующую секцию"></a>
+        <a href="#" class="scroll-btn" aria-label="Прокрутка на следующую секцию">
+          <svg class="scroll">
+            <use href="./img/icons/sprites.svg#arrow-scroll" class="scroll"></use>
+          </svg>
+        </a>
       </div>
       <div class="paginator">
         <ul class="paginator__list">
@@ -99,7 +108,7 @@
     <section class="section best">
       <div class="container best-container">
         <div class="best-header">
-          <h2 class="title title--color--black title--centered best-header__title">мы лучшие</h2>
+          <h2 class="title title--color--black title--centered">мы лучшие</h2>
         </div>
         <div class="best-content">
           <ul class="best-content__list">
@@ -117,7 +126,7 @@
               </div>
             </li>
             <li class="best-content__item">
-              <div class="best-content__icon">
+              <div class="best-content__icon best-content__icon-hand">
                 <svg class="hand">
                   <use href="./img/icons/sprites.svg#hand" class="hand"></use>
                 </svg>
@@ -130,7 +139,7 @@
               </div>
             </li>
             <li class="best-content__item">
-              <div class="best-content__icon best-content__icon--padd">
+              <div class="best-content__icon best-content__icon-natural">
                 <svg class="natural">
                   <use href="./img/icons/sprites.svg#natural" class="natural"></use>
                 </svg>
@@ -411,12 +420,95 @@
         </li>
       </ul>
     </section>
-    
-    <section class="section contacts">
-      <div class="contacts__map">
-        <img src="./img/content/Layer_4.png" alt="карта" class="map">
+    <section class="section form">
+      <div class="container form__container">
+        <div class="form__title">
+          <h2 class="title">Закажите доставку</h2>
+        </div>
+        <form action="" class="form__elem">
+          <div class="form__left">
+            <div class="form__left-row">
+              <label for="" class="form__left-block">
+                <div class="form__block-title">Имя</div>
+                <input placeholder="" type="text" name="name" class="form__input">
+              </label>
+              <label for="" class="form__left-block">
+                <div class="form__block-title">Телефон</div>
+                <input placeholder="89212264923" type="text" class="form__input" name="phone">
+              </label>
+            </div> 
+            <div class="form__left-row">
+              <label for="" class="form__left-block">
+                <div class="form__block-title">Улица</div>
+                <input placeholder="" type="text" name="street" class="form__input">
+              </label>
+            </div>
+            <div class="form__left-row">
+              <label for="" class="form__left-block">
+                <div class="form__block-title">Дом</div>
+                <input placeholder="" type="number" name="house" class="form__input">
+              </label>
+              <label for="" class="form__left-block">
+                <div class="form__block-title">Корпус</div>
+                <input placeholder="" type="number" name="building" class="form__input">
+              </label>
+              <label for="" class="form__left-block">
+                <div class="form__block-title">Квартира</div>
+                <input placeholder="" type="number" name="house" class="form__input">
+              </label>
+              <label for="" class="form__left-block">
+                <div class="form__block-title">Этаж</div>
+                <input placeholder="" type="number" name="floor" class="form__input" maxlength="3">
+              </label>
+            </div> 
+          </div>
+          <div class="form__right">
+            <div class="form__right-row">
+              <label for="" class="form__right-block">
+                <div class="form__block-title">Комментарий</div>
+                <textarea class="form__input form__block-textarea" name="feedback"></textarea>
+              </label>
+            </div>
+            <div class="form__right-row">
+              <div class="form__options">
+                <label for="" class="option">
+                  <input type="radio" class="option__radio" checked name="payment"></input>
+                  <div class="option__visible">
+                    <div class="option__visible-inner"></div>
+                  </div>
+                  <div class="option__title">Потребуется сдача</div>
+                </label>
+                <label for="" class="option">
+                  <input type="radio" class="option__radio" checked name="payment"></input>
+                  <div class="option__visible">
+                    <div class="option__visible-inner"></div>
+                  </div>
+                  <div class="option__title">Оплата по карте</div>
+                </label>
+              </div>
+            </div>
+            <div class="form__right-row">
+              <div class="form__check">
+                <label for="" class="check">
+                  <input type="checkbox" class="check__checkbox" checked name="recall"></input>
+                  <div class="option__title">Не перезванивать</div>
+                </label>
+              </div>
+            </div>
+            <div class="form__right-row">
+              <div class="form__button">
+                <input type="submit" value="Заказать" class="button button--order">
+              </div>
+              <div class="form__clear-btn">
+                <button id="clear-btn">Очистить</button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
-
+    </section>
+    <section class="section contacts">
+      <div class="contacts__map"></div>
       <footer class="contacts__footer">
         <div class="container contacts__footer-container">
           <address class="contacts__footer-left">
@@ -434,24 +526,32 @@
           <div class="contacts__social">
             <ul class="contacts__social-list">
               <li class="contacts__social-item">
-                <svg class="vk__icon">
-                  <use href="./img/icons/sprites.svg#vk" class="vk-pic"></use>
-                </svg>
+                <a href="vk.com" class="contacts__social-link">
+                  <svg class="vk__icon">
+                    <use href="./img/icons/spriteN.svg#vk" class="vk-pic pic-color"></use>
+                  </svg>
+                </a>
               </li>
               <li class="contacts__social-item">
-                <svg class="facebook__icon">
-                  <use href="./img/icons/sprites.svg#fb" class="facebook-pic"></use>
-                </svg>
+                <a href="facebook.com" class="contacts__social-link">
+                  <svg class="facebook__icon">
+                    <use href="./img/icons/sprites.svg#fb" class="facebook-pic pic-color"></use>
+                  </svg>
+                </a>
               </li>
               <li class="contacts__social-item">
-                <svg class="instagram__icon">
-                  <use href="./img/icons/sprites.svg#inst" class="instagram-pic"></use>
-                </svg>
+                <a href="instagram.com" class="contacts__social-link">
+                  <svg class="instagram__icon">
+                    <use href="./img/icons/sprites.svg#inst" class="instagram-pic pic-color"></use>
+                  </svg>
+                </a>
               </li>
               <li class="contacts__social-item">
-                <svg class="twitter__icon">
-                  <use href="./img/icons/sprites.svg#twitter" class="twitter-pic"></use>
-                </svg>
+                <a href="twitter.com" class="contacts__social-link">
+                  <svg class="twitter__icon">
+                    <use href="./img/icons/spriteN.svg#twitter" class="twitter-pic pic-color"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
@@ -475,17 +575,6 @@
       </nav>
     </aside>
   </div>
-
-    <!-- <div class="wrapper"> -->
-    <!-- бэкграунд без абсолюта -->
-
-    <!-- </section> -->
-    <!-- <section class="best">  
-  </section>
-  <section class="reviews">   -->
-
-
-
+   
 </body>
-
 </html>

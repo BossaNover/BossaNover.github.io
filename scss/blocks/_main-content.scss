@@ -1,4 +1,3 @@
-// не заданы стили для main-content. Стоит задать? Может, высоту например?
 .main-content {
   position: absolute;
   top: 50%;
@@ -10,21 +9,40 @@
 .main-content__container {  
   @include flex-center;
  // height: 100%;  //  почему здесь h100%  и будет ли она работать?  Похоже, не будет. Есть у секции height: 100vh
+ @include tablets { 
+   flex-direction: column;
+   padding: 0 15%;
+  }
 }
 
 .main-content__we-do {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
+  @include tablets { 
+    align-items: center; 
+    padding: 0 15%;
+  }
 }
 
 .main-content__title {
   padding-top: rem(8px);
-  margin-bottom: rem(35px);
+  margin-bottom: 7%; // rem(35px); // как вариант поставить сюда 7%
+  
+  @include tablets { 
+    padding-top: 0;
+    margin-bottom: 9%;
+  }
+
 }
 
 .main-content__title-small {
   color: $white;
   line-height: rem(60px);
   letter-spacing: -1.63px;
+  
+  @include tablets { 
+    text-align: center; 
+  }
 }

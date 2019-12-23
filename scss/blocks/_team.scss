@@ -11,11 +11,28 @@
     bottom: 0;
     background-color: #2f3234;
     opacity: 93%;
-    padding: 113px 97px;
+    padding: 8.5% 7%;
+    
+    @include tablets {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &__content {
+    @include tablets {
+      @include flex-center;
+      flex-direction: column;
+    }
+
   }
 
   &__header {
     margin-bottom: rem(40px);
+    
+    @include tablets {
+      margin-top: 22%;
+    }
   }
 
   &__accordeon-trigger {
@@ -31,7 +48,7 @@
       width: rem(9px);
       height: rem(7px);
       position: absolute;
-      top: rem(7px);
+      top: 50%; 
       left: rem(-20px);
     }
   }
@@ -50,15 +67,33 @@
   
   &__accordeon {
 
+    &-list {
+      
+      @include tablets {
+        @include flex-center;
+        flex-direction: column;
+      }
+    }
+      
     &-item {
       padding-left: 20px;
+
+      @include tablets {
+        @include flex-center;
+        flex-direction: column;
+      }
     }
 
     &-item:hover {
       .team__accordeon-contentwrap {
       height: rem(100px);
+
+        @include tablets {
+          height: rem(195px);
       }
-      .team__accordeon-trigger:before {
+      
+    }
+    &-trigger:before {
       content: '';
       transform: rotate(180deg);
       }
@@ -71,12 +106,18 @@
       height: 0;
       overflow: hidden; // чтобы за границами секций не вылезало
      //height: 0; //здесь дучше height, а не max-height. При открываении будет 95px
-      transition: .4s; // для плавности открывани и закрывания
+      transition: .4s; // для плавности открывани и закрывания. ПОЧЕМУ_ТО НЕ РАБОТАЕТ
+    
     
     }
 
     &-content {
       display: flex;
+      
+      @include tablets {
+        @include flex-center;
+        flex-direction: column;
+      }
     }
 
     &-picture {
@@ -84,10 +125,20 @@
       height: rem(100px);
       width: rem(100px);
       margin-right: rem(21px);
+
+      @include tablets {
+        margin-right: 0;
+      }
     }
    
     &-textwrap {
       max-width: rem(208px);
+    
+      @include tablets {
+        @include flex-center;
+        flex-direction: column;
+        max-width: rem(335px);
+      }
     }
 
     &-position {
@@ -96,8 +147,19 @@
       color: $white;
       font-weight: 700;
       margin-bottom: rem(12px);
+    
+      @include tablets {
+        margin-top: rem(22px);
+      }
+    
     }
   
+    &-text {
+      @include tablets {
+        text-align: center;
+      }
+    }
+
     &-desc {
       font-family: $font-text; 
       font-size: $f-size_text;

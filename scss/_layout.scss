@@ -50,7 +50,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  max-width: 100%; // делаем для масштабирования картинок - чтобы они сжимались при сжатиии окна
 }
 
 ul li {
@@ -58,7 +58,7 @@ ul li {
 }
 
 .section {
-  min-height: rem(650px); // почему именно MIN-height?
+  min-height: rem(650px); 
   height: 100vh; //  для отображения секции в высоту окна
 }
 
@@ -70,13 +70,25 @@ ul li {
 
 .main-page {
   @include background;
-  background-image: url('../img/back/video-bg.png');
+  background-image: url('../img/back/video-bg.png'); // при сжатии до ширины 480px  бэкграунд вываливается из окна. 
   position: relative;
 }
 
 .main-burger {
   @include flex-center;
   margin-right: rem(10px);
+  padding-bottom: rem(50px);
+
+  @include tablets { 
+    padding-bottom: rem(5px);
+  }
+}
+
+.big-burger {
+  @include tablets { 
+    transform: translateY(rem(-30px));
+  }
+  
 }
 
 .title {
@@ -108,11 +120,6 @@ ul li {
 }
 
 .main-scroll {
-  width: rem(29px);
-  height: rem(14px);
-  background-image: url('../img/icons/arrow-scroll.png');
-  background-repeat: no-repeat;
-  background-size: contain;
   display: block;
   position: absolute; 
   bottom: rem(30px);
@@ -121,63 +128,7 @@ ul li {
   cursor: pointer;
 }
 
-.best {
-  @include background;
-  @include flex-center;
-  background-image: url('../img/back/best-bg.png');
-}
-
-.best-container {
-  @include flex-center;
-  flex-direction: column;
-}
-
-.best-header__title {
-  margin-bottom: rem(50px);
-}
-
 .address {
   @include text;
 }
 
-.phone {
-  
-  &__icon {
-    width: rem(12px);
-    height: rem(11px);
-    margin-right: rem(10px);
-  }
-  
-  &__digits {
-    font-family: $font-text;
-    font-size: $f-size_text;
-    font-weight: 700;
-    color: $orange;
-  }
-}
-
-.vk__icon {
-  width: 23px;
-  height: 13px;
-  fill: #585858;
-  opacity: 0.3;
-}
-
-.facebook__icon {
-  width: 20px;
-  height: 20px;
-  fill: #585858;
-  opacity: 0.3;
-}
-
-.instagram__icon {
-  width: 20px;
-  height: 20px;
-  fill: #585858;
-}
-
-.twitter__icon {
-  width: 20px;
-  height: 16px;
-  fill: #585858;
-}

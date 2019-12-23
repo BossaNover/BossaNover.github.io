@@ -4,6 +4,10 @@
   top: rem(90px);
   right: rem(52px);
 
+  @include tablets {
+    display: none;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;

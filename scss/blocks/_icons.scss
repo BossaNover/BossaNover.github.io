@@ -8,8 +8,8 @@
   height: rem(241px);
 }
 
-.arrow-scroll {
-  width: rem(29px); 
+.scroll {
+  width: rem(29px);
   height: rem(14px);
 }
 
@@ -41,4 +41,44 @@
 .map-marker {
   width: rem(46px);
   height: rem(57px);
+}
+
+.vk__icon {
+  width: rem(23px);
+  height: rem(13px);
+}
+
+.facebook__icon {
+  width: rem(20px);
+  height: rem(20px);
+}
+
+.instagram__icon {
+  width: rem(20px);
+  height: rem(20px);
+}
+
+.twitter__icon {
+  width: rem(20px);
+  height: rem(16px);
+}
+
+.pic-color {
+  fill: #585858;
+}
+
+.phone {
+  
+  &__icon {
+    width: rem(12px);
+    height: rem(11px);
+    margin-right: rem(10px);
+  }
+  
+  &__digits {
+    font-family: $font-text;
+    font-size: $f-size_text;
+    font-weight: 700;
+    color: $orange;
+  }
 }

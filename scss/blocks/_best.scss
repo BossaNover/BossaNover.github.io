@@ -1,0 +1,115 @@
+.best {
+  @include background;
+  @include flex-center;
+  background-image: url('../img/back/best-bg.png');
+
+  @include tablets {
+    align-items: flex-start;
+  }
+}
+
+.best-container {
+  @include flex-center;
+  flex-direction: column;
+
+  @include tablets {
+    margin-top: rem(243px);
+  }
+
+  @include phones { 
+    @include flex-between;
+    margin-top: rem(105px);
+  }
+}
+
+.best-header {
+  margin-bottom: 6.7%;
+}
+
+.best-content {
+  &__list {
+    display: flex;
+    justify-content: center;
+    max-width: rem(946px);
+  
+    @include phones { 
+      flex-direction: column;
+    }
+  }
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    margin: 0 3%;
+
+    @include phones { 
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 9%;
+    }  
+  }
+
+  &__icon {
+    margin-bottom: rem(30px);
+    
+    @include phones { 
+      margin-bottom: 0;
+      margin-right: rem(30px);    
+    }
+
+    &-hand {
+      @include phones { 
+        margin-right: 11%;    
+      }
+    }
+
+    &-natural {
+      margin-bottom: rem(40px);
+      @include phones { 
+        margin-right: 8%;    
+      }
+
+    }
+   
+  }
+
+  &__title-text {
+    @include phones {
+      text-align: left;
+    
+    }
+  }
+
+
+  &__item-title {
+    font-family: $font-cursivetitle; 
+    font-size: $f-size_cursivetitle2;
+    color: $grey;
+    line-height: 1;
+    letter-spacing: -0.6px;
+    text-align: center;
+    margin-bottom: rem(18px);
+    @include phones {
+      text-align: left;
+    }
+
+    &--padd {
+      margin-bottom: rem(10px);
+    }
+  }
+
+  &__text {
+    @include text;
+    color: $grey;
+    line-height: rem(24px);
+    opacity: 80%;
+    text-align: center;
+
+    @include phones {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.form {
+  @include background;
+  background-image: url('../../img/back/bg-texture.png'), url('../../img/back/chalkboard_texture.png');
+  @include flex-center;
+
+  &__container {
+    @include flex-center;
+    flex-direction: column; 
+  }
+
+  &__title {
+    margin-bottom: 5%;
+  }
+
+  &__elem {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__left {
+    flex: 1;
+    padding-right: 1%;
+  }
+
+  &__right {
+    flex: 1;
+    padding-left: 1%;
+  } 
+
+  &__left-row {
+    display: flex;
+    margin-bottom: 3%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__right-row {
+    margin-bottom: 3%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__left-block {
+    flex: 1;
+    margin-right: 5%;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__block-title, &__input {
+    @include text;
+  }
+
+  &__block-title {
+    margin-bottom: rem(5.5px);
+  }
+
+  &__block-textarea {
+    height: rem(110px);
+  }
+  
+  &__input {
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background: $white;
+    padding: rem(9.5px) rem(9px);
+    outline: none;
+
+    &:focus {
+      border-color: $yellow;
+    }
+
+  }
+}
+
+.check {
+  display: flex;
+  align-items: center;  
+
+  &__checkbox {
+    margin-right: rem(10px);
+  }
+}
+
+
+.form__options {
+  display: flex;
+}
+
+.option {
+  @include flex-between;
+  margin-right: rem(20px);
+  &:last-child {margin-right: 0;}
+
+  &__title {
+    @include text;
+  }
+  
+  &__radio {
+    display: none;
+  }
+  
+  &__visible {
+    @include flex-center;
+    width: rem(15px);
+    height: rem(15px);
+    background: $white;
+    border-radius: 50%;
+    border: none;
+    margin-right: rem(9px);
+  
+    &-inner {
+      display: none;
+      width: rem(7px);
+      height: rem(7px);
+      border-radius: 50%;
+      background: $orange;
+    }
+  }
+}
+
+.option__radio:checked ~ .option__visible>.option__visible-inner {
+  display: inline-block;
+}
+
+.form__button, .form__clear-btn {
+  display: inline-block;
+}
+
+.form__button {
+  margin-right: rem(17px);
+}
+
+#clear-btn {
+  all: unset;
+  @include text;
+}
+

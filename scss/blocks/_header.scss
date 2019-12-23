@@ -1,21 +1,22 @@
 .header {
-  //width: 100%; //Ольга выставила такую ширину, не объяснила, зачем.
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-top: rem(12px);
-  max-width: rem(754px)+rem(97px)+rem(92px);
+  width: 100%;                  //Ольга выставила это, не объяснила, зачем. Если убрать ничего не меняется.
+ // position: absolute;             //  Убрал все это, потому что при этих свойствах все либо криво
+ // left: 50%;                         //  либо не срабатывает flex-wrap: wrap       
+ // transform: translateX(-50%);
+ padding-top: rem(12px);
+ // max-width: rem(754px)+rem(97px)+rem(92px);
 }
 
 .header__container {
   @include flex-between-wrap;
-  width: rem(940px); //не знаю как задать ширину
+  //width: rem(940px); //не знаю как задать ширину
 }
 
-.header__wrapper {
-  margin-left: auto;
-  display: flex;
-  flex-wrap: wrap;
+.header__wrapper {          //У Владимира называется header__menu
+  margin-left: auto; // у Владимира вместо этого есть margin-right: rem(20px) плюс text-align: right;
+  display: flex; //у Владимира вместо этого flex: 1;
+  flex-wrap: wrap; // у Владимира этого нет 
+  align-items: center;
 }
 
 .header__button {

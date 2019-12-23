@@ -2,18 +2,15 @@
   position: relative;
 
   &__map {
-    position: absolute;
-    top: 0;
-    left: 0; 
-    right: 0;
-    width: 100%;
-    text-align: center;
+    @include background;
+    background-image: url('../../img/back/Layer_4.png');
+    width: 100%; // это свойство не срабатывает, видимо потому что не надо растягивать по ширине
+    height: 100%;
   }
 
   &__footer {
     @include background;
     background-image: url('../../img/back/chalkboard_texture_small.png');
-    height: rem(60px);
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -21,27 +18,43 @@
 
   &__footer-container {
     @include flex-between;
-    height: 100px;
   }
 
 
   &__footer-left {
-    @include flex-between;
+    flex: 1;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    height: 100%;
+    padding: rem(7px) 0; 
   }
 
 
-  &__social-list {
-    height: 100%;
-    @include flex-center;
-  }
+  &__social {
+    flex: 1;
 
-  &__social-item {
-    margin-right: rem(20px);
-    @include flex-center;
-  }
+    @include tablets {
+      flex: 0;   //убираем специально, чтобы создать приоритет левой секции (flex:1), тогда слова не переносятся
+    }
+  
+    &-list {
+      display: flex;
+      justify-content: flex-end;
+    }
 
+    &-item {
+      margin-right: rem(20px);
+      @include flex-center;
 
-
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+  
+      &:hover {
+        .pic-color {
+        fill: $white;
+        }
+      }
+    }
+  }  
 }
