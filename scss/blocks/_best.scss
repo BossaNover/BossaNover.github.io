@@ -2,23 +2,16 @@
   @include background;
   @include flex-center;
   background-image: url('../img/back/best-bg.png');
-
-  @include tablets {
-    align-items: flex-start;
-  }
 }
 
 .best-container {
   @include flex-center;
   flex-direction: column;
 
-  @include tablets {
-    margin-top: rem(243px);
-  }
 
   @include phones { 
     @include flex-between;
-    margin-top: rem(105px);
+   // margin-top: rem(105px);
   }
 }
 
@@ -60,6 +53,14 @@
       margin-right: rem(30px);    
     }
 
+    //&-pic {             --код Владимира. Непонятно, как в итоге все выравнивается для телефонов
+    //  width: 90%;
+    //  height: rem(100px);
+    //  svg {
+    //    max-width: 95%;
+    //  }
+    // }
+
     &-hand {
       @include phones { 
         margin-right: 11%;    
@@ -71,9 +72,7 @@
       @include phones { 
         margin-right: 8%;    
       }
-
     }
-   
   }
 
   &__title-text {

@@ -76,11 +76,13 @@
     }
       
     &-item {
-      padding-left: 20px;
+      padding-left: rem(20px);
 
       @include tablets {
         @include flex-center;
         flex-direction: column;
+        padding-left: 0;
+        
       }
     }
 

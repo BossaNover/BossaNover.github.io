@@ -17,7 +17,6 @@
       top: rem(47px);
       left: rem(60px);
     }
-
   }
 
   &__list, &__item, &__content {
@@ -26,6 +25,10 @@
 
   &__list, &__item {
     display: flex;
+  }
+  
+  &__item {
+    z-index: 100;
   }
 
   &__trigger {
@@ -57,7 +60,7 @@
       width: 100%;
       top: 0;
       left: 0;
-      display: flex; // чтобы сделать элемент блочным, чтоб он имел высоту и ширину (before по умолч. -строчный)
+      display: flex; // сделать элемент блочным, чтоб он имел высоту и ширину (before по умолч.-строчный)
       background: rgba(20, 20, 20, 0.7);
     }
   }
@@ -74,9 +77,13 @@
   }
 
   &__item:hover {
+       
     .menu__content-wrap {
-      width: 540px;
-    }
+      width: 543px;
+      @include phones {
+        width: 290px;
+      }
+        }
 
     .menu__trigger-title {
       color: $yellow;
@@ -87,9 +94,8 @@
 .menu__content {
   padding: rem(62px) rem(35px);
   background: rgba(#2f3234, 0.93);
-  min-width: rem(540px)  // делаем ширину на текст, чтобы он не перестраивался при открывании секции. Почему min?
+ // min-width: rem(540px)  // делаем ширину на текст, чтобы он не перестраивался при открывании секции. Почему min?
 }
-
 
 
 .menu__desc {

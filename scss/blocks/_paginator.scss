@@ -16,7 +16,7 @@
   }
 
   &__item {
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
   }
 }
 
@@ -36,8 +36,8 @@
   &::before {
     content: "";
     display: flex;
-    width: 6px;
-    height: 6px;
+    width: rem(6px);
+    height: rem(6px);
     background-color: $white;
     border-radius: 50%;
   }     

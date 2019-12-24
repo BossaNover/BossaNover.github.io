@@ -18,6 +18,11 @@
 
   &__footer-container {
     @include flex-between;
+
+    @include phones {
+      @include flex-center;
+      flex-direction: column;
+    }
   }
 
 
@@ -27,9 +32,15 @@
     justify-content: center;
     flex-direction: column;
     padding: rem(7px) 0; 
+
+    @include phones {
+      align-items: center;
+      padding: rem(18px); 
+    }
   }
-
-
+  
+ 
+  
   &__social {
     flex: 1;
 
