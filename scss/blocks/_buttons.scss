@@ -1,38 +1,35 @@
 .button {
   @include button; 
-}
 
-.button--order {
-  text-decoration: none;
-  background-color: $orange;
+  &--order {
+    text-decoration: none;
+    background-color: $orange;
 
-  &:hover {
-    background-color: $dark-orange;
+    &:hover {
+      background-color: $dark-orange;
+    }
   }
+
+  &--review {
+    background-color: $grey;
+    //width: rem(110px);   -- не нужна ширина, все выравнивается по контенту + паддинги баттона
+    
+    &:hover {
+      background-color: $black;
+    }
+  } 
 }
 
-.button--review {
-  @include button;
-  background-color: $grey;
-  //width: rem(110px);   -- не нужна ширина, все выравнивается по контенту + паддинги баттона
+.button__desktop {
   @include phones {
     display: none;
   } 
-
-  &--phones {
-    @include button;
-    background-color: $grey;
-    display: none;
-    
-    @include phones {
-      display: inline-block;
-    } 
-  }
-  
-  
-  &:hover {
-    background-color: $black;
-  }
 }
 
+.button__phones {
+  display: none;
+  @include phones {
+    display: inline-block;
+  } 
+}
 

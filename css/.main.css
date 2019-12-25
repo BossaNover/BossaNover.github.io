@@ -614,13 +614,11 @@ ul li {
 .button--review:hover {
   background-color: #1f2122;
 }
-
 @media screen and (max-width: 480px) {
   .button__desktop {
     display: none;
   }
 }
-
 .button__phones {
   display: none;
 }
@@ -1599,4 +1597,4 @@ ul li {
   fill: #fff;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=.main.css.map */
