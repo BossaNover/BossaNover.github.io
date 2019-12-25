@@ -44,6 +44,7 @@
   &__left {
     flex: 1;
     padding-right: 1%;
+    margin-bottom: rem(15px);
     
     @include tablets {
       padding-right: 0;
@@ -55,15 +56,18 @@
     padding-left: 1%;
     width: 100%;
 
+    @include tablets {
+      padding-left: 0;
+    }
+
     @include phones {
       @include flex-center;
       flex-direction: column;
     }
-
   } 
 
   &__left-row {
-    display: flex;
+    @include flex-between;
     margin-bottom: 3%;
     &:last-child {
       margin-bottom: 0;
@@ -90,17 +94,14 @@
 
   &__left-block {
     flex: 1;
-    margin-right: 5%;
+    margin-left: 5%;
     
     @include phones {
-      margin-right: 2.5%;
+      margin-left: 2.5%;
     }
     
-    &:last-child {
-      margin-right: 0;
-      @include phones {
-        margin-right: 0;
-      }
+    &:first-child {
+      margin-left: 0;
     }
 
     &--hidden {

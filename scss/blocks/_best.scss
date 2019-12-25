@@ -46,6 +46,7 @@
   }
 
   &__icon {
+    
     margin-bottom: rem(30px);
     
     @include phones { 
@@ -53,27 +54,30 @@
       margin-right: rem(30px);    
     }
 
-    //&-pic {             --код Владимира. Непонятно, как в итоге все выравнивается для телефонов
-    //  width: 90%;
-    //  height: rem(100px);
-    //  svg {
-    //    max-width: 95%;
-    //  }
-    // }
-
-    &-hand {
-      @include phones { 
-        margin-right: 11%;    
-      }
-    }
-
-    &-natural {
-      margin-bottom: rem(40px);
-      @include phones { 
-        margin-right: 8%;    
-      }
+    &-pic {            // 
+      width: rem(97px);
+      height: rem(97px);
+      display: flex;
+      justify-content: center;
     }
   }
+    
+//      svg {          --код Владимира
+//        max-width: 95%;
+//      }
+
+//    &-hand {
+//      @include phones { 
+//       margin-right: 11%;    
+//      }
+//    }
+
+//   &-natural {
+//      margin-bottom: rem(40px);
+//      @include phones { 
+//        margin-right: 8%;    
+//      }
+//    }
 
   &__title-text {
     @include phones {
