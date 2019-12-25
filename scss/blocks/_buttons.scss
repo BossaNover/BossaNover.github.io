@@ -14,8 +14,22 @@
 .button--review {
   @include button;
   background-color: $grey;
-  width: rem(110px);
+  //width: rem(110px);   -- не нужна ширина, все выравнивается по контенту + паддинги баттона
+  @include phones {
+    display: none;
+  } 
 
+  &--phones {
+    @include button;
+    background-color: $grey;
+    display: none;
+    
+    @include phones {
+      display: inline-block;
+    } 
+  }
+  
+  
   &:hover {
     background-color: $black;
   }
