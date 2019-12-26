@@ -18,18 +18,23 @@
       background-color: $black;
     }
   } 
-}
 
-.button__desktop {
-  @include phones {
+  &--desktop {
+    @include phones {
+      display: none;
+    } 
+  }
+
+  &--phones {
     display: none;
-  } 
+    @include phones {
+      display: inline-block;
+    } 
+  }
+
 }
 
-.button__phones {
-  display: none;
-  @include phones {
-    display: inline-block;
-  } 
-}
+
+
+
 

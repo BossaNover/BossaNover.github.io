@@ -579,12 +579,12 @@ ul li {
   fill: #585858;
 }
 
-.phone__icon {
+.phone-icon {
   width: 0.75rem;
   height: 0.6875rem;
   margin-right: 0.625rem;
 }
-.phone__digits {
+.phone-digits {
   font-family: "Ubuntu", "Open Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
@@ -614,18 +614,16 @@ ul li {
 .button--review:hover {
   background-color: #1f2122;
 }
-
 @media screen and (max-width: 480px) {
-  .button__desktop {
+  .button--desktop {
     display: none;
   }
 }
-
-.button__phones {
+.button--phones {
   display: none;
 }
 @media screen and (max-width: 480px) {
-  .button__phones {
+  .button--phones {
     display: inline-block;
   }
 }

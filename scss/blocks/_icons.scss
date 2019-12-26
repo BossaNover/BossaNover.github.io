@@ -68,14 +68,13 @@
 }
 
 .phone {
- 
-  &__icon {
+   &-icon {
     width: rem(12px);
     height: rem(11px);
     margin-right: rem(10px);
   }
   
-  &__digits {
+  &-digits {
     font-family: $font-text;
     font-size: $f-size_text;
     font-weight: 700;
