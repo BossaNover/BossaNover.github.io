@@ -1,24 +1,60 @@
 .header {
   width: 100%;                  //Ольга выставила это, не объяснила, зачем. Если убрать ничего не меняется.
- // position: absolute;             //  Убрал все это, потому что при этих свойствах все либо криво
- // left: 50%;                         //  либо не срабатывает flex-wrap: wrap       
- // transform: translateX(-50%);
- padding-top: rem(12px);
- // max-width: rem(754px)+rem(97px)+rem(92px);
+  // position: absolute;             //  Убрал все это, потому что при этих свойствах все либо криво
+  // left: 50%;                         //  либо не срабатывает flex-wrap: wrap       
+  // transform: translateX(-50%);
+  padding-top: rem(12px);
+  // max-width: rem(754px)+rem(97px)+rem(92px);
+
+  &__container {
+    @include flex-between-wrap;
+    //width: rem(940px); //не знаю как задать ширину  
+  }
+
+  &__wrapper {          //У Владимира называется header__menu
+    margin-left: auto; // у Владимира вместо этого есть margin-right: rem(20px) плюс text-align: right;
+    display: flex; //у Владимира вместо этого flex: 1;
+    flex-wrap: wrap; // у Владимира этого нет 
+    align-items: center;
+  }
+
+  &__button {
+    display: inline-block;
+  }
+
+&_fullscreen {
+  .nav {
+    @include flex-center;
+    position: absolute; //Александр сделал fixed, т.к. у него контейнер выше хедера и были полосы по бокам (95%)
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;  // если не делается ширина 100% (м.б.строчный элемент) при абсолюте, надо задать дисплей-блок/флекс.
+    max-width: none;
+    height: 100%;
+    background: rgba($black, .9);
+    z-index: 9998;
+  
+    &__list {
+      flex-direction: column;
+      font-size: rem(26.67px);
+    }
+    
+    &__item {
+      flex-direction: column;
+      margin-bottom: 15px;
+    
+      &:after {
+        margin: 15px 0 0;
+      
+        &:nth-child(5) {   // пытаюсь убрать точку после слов 
+         display: none;
+        }
+      }
+    }
+  }
 }
 
-.header__container {
-  @include flex-between-wrap;
-  //width: rem(940px); //не знаю как задать ширину
-}
 
-.header__wrapper {          //У Владимира называется header__menu
-  margin-left: auto; // у Владимира вместо этого есть margin-right: rem(20px) плюс text-align: right;
-  display: flex; //у Владимира вместо этого flex: 1;
-  flex-wrap: wrap; // у Владимира этого нет 
-  align-items: center;
-}
 
-.header__button {
-  display: inline-block;
 }

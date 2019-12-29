@@ -55,7 +55,9 @@
 }
 
 @mixin button {
+  font-family: $font-text;
   color: $white;
+  letter-spacing: 0;
   text-transform: uppercase;
   font-size: rem(13px);
   font-weight: 500;

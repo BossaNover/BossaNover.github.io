@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Startpage</title>
   <link rel="stylesheet" href="./css/main.css">
-  
+
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <section class="section main-page">
       <header class="header">
         <div class="container header__container container_h100">
-          <svg class="logo">
+          <svg class="logo-pic">
             <use href="./img/icons/sprites.svg#logo" class="logo"></use>
           </svg>
           <div class="header__wrapper">
@@ -37,12 +37,15 @@
                   <a href="#" class="nav__link">Отзывы</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Как мы работаем</a>
+                  <a href="#" class="nav__link nav__link_tablets">Как мы работаем</a>
                 </li>
                 <li class="nav__item">
                   <a href="#" class="nav__link">Контакты</a>
                 </li>
               </ul>
+              <div class="nav__close">
+                <a href="#" class="close"></a>
+              </div>
             </nav>
             <div class="header__button">
               <a href="#" class="button button--order">Заказать</a>
@@ -157,7 +160,114 @@
       </div>
     </section>
     <section class="section burgers">
-
+      <div class="container burgers__container">
+        <div class="burgers-icons-sidebar">
+          <div class="burgers-comp">
+            <svg class="burgers-comp__burger-icon">
+              <use href='./img/icons/sprites.svg#burger' class="burger"></use>
+            </svg>
+            <div class="burgers-comp__title">состав</div>
+          </div>
+          <div class="burgers-comp__hover">
+            <ul class="burgers-comp__list">
+              <li class="burgers-comp__item">
+                <svg class="burgers-comp__icons">
+                  <use href='./img/icons/sprites.svg#beef' class="beef"></use>
+                </svg>
+                <div class="burgers-comp__ingred-wrap">
+                  <p class="burgers-comp__text">Говядина</p>
+                </div>
+                <p class="burgers-comp__text">300 г</p>
+              </li>
+              <li class="burgers-comp__item">
+                <svg class="burgers-comp__icons">
+                  <use href='./img/icons/sprites.svg#buns' class="buns"></use>
+                </svg>
+                <div class="burgers-comp__ingred-wrap">
+                  <p class="burgers-comp__text">Булочки</p>
+                </div>
+                <p class="burgers-comp__text">100 г</p>
+              </li>
+              <li class="burgers-comp__item">
+                <svg class="burgers-comp__icons">
+                  <use href='./img/icons/sprites.svg#salad' class="salad"></use>
+                </svg>
+                <div class="burgers-comp__ingred-wrap">
+                  <p class="burgers-comp__text">Зелень</p>
+                </div>
+                <p class="burgers-comp__text">70 г</p>
+              </li>
+              <li class="burgers-comp__item">
+                <svg class="burgers-comp__icons">
+                  <use href='./img/icons/spriteN.svg#sauce' class="sauce"></use>
+                </svg>
+                <div class="burgers-comp__ingred-wrap">
+                  <p class="burgers-comp__text">Соус</p>
+                </div>
+                <p class="burgers-comp__text">150 г</p>
+              </li>
+              <li class="burgers-comp__item">
+                <svg class="burgers-comp__icons">
+                  <use href='./img/icons/sprites.svg#cucumber' class="cucumber"></use>
+                </svg>
+                <div class="burgers-comp__ingred-wrap">
+                  <p class="burgers-comp__text">Овощи</p>
+                </div>
+                <p class="burgers-comp__text">200 г</p>
+              </li>
+              <li class="burgers-comp__item">
+                <svg class="burgers-comp__icons">
+                  <use href='./img/icons/sprites.svg#cheese' class="cheese"></use>
+                </svg>
+                <div class="burgers-comp__ingred-wrap">
+                  <p class="burgers-comp__text">Сыр</p>
+                </div>
+                <p class="burgers-comp__text">80 г</p>
+              </li>
+            </ul>
+            <div class="burgers-comp__close">
+              <a href="#" class="comp-close"></a>
+            </div>
+          </div>
+          <div class="burgers-calories">
+            <svg class="burgers-calories__kkal-icon">
+              <use href='./img/icons/sprites.svg#kkal' class="kkal"></use>
+            </svg>
+            <div class="burgers-calories__1200">1200</div>
+            <div class="burgers-calories__title">ккал</div>
+          </div>
+        </div>
+        <div class="burgers-content">
+          <div class="burgers-content__picture">
+            <img src="./img/content/black_ink_burger.png" alt="черный бургер" class="burgers__picture-black-burger">
+          </div>
+          <div class="burgers-content__desc">
+            <h2 class="burgers-content__title">Dark beef burger</h2>
+            <p class="burgers-content__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя
+              кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением
+              экзотического соуса чураско.</p>
+            <div class="burgers-content__price">500<span> рублей</span>
+              <div class="burgers-content__button">
+                <a href="#" class="button button--order">Заказать</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="burgers-left-scroll">
+          <a href="#" class="left-scroll" aria-label="Прокрутка на предыдущий бургер">
+            <svg class="left-scroll">
+              <use href="./img/icons/sprites.svg#arrow-scroll" class="scroll"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="burgers-right-scroll">
+          <a href="#" class="right-scroll" aria-label="Прокрутка на следующий бургер">
+            <svg class="right-scroll">
+              <use href="./img/icons/sprites.svg#arrow-scroll" class="scroll"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
     </section>
     <section class="section team">
       <div class="team__container">
@@ -251,7 +361,7 @@
           </div>
         </div>
       </div>
-    <section>
+    </section>
     <section class="section menu">
       <div class="menu__title">
         <h2 class="title title--color--white">меню</h2>
@@ -399,7 +509,7 @@
               <button class="button button--review button--desktop" type="button">подробнее</button>
               <button class="button button--review button--phones" type="button">читать отзыв</button>
             </div>
-          </li>
+        </li>
         <li class="reviews__item">
           <img src="./img/content/7man.png" alt="Фотография" class="reviews__pic">
           <div class="reviews__hover">
@@ -440,7 +550,7 @@
         <form action="" class="form__elem" id="myForm">
           <div class="form__left">
             <div class="form__left-row">
-              <label  class="form__left-block">
+              <label class="form__left-block">
                 <div class="form__block-title">Имя</div>
                 <input placeholder="" type="text" name="name" class="form__input">
               </label>
@@ -448,7 +558,7 @@
                 <div class="form__block-title">Телефон</div>
                 <input placeholder="89212264923" type="text" class="form__input" name="phone">
               </label>
-            </div> 
+            </div>
             <div class="form__left-row">
               <label class="form__left-block">
                 <div class="form__block-title">Улица</div>
@@ -472,7 +582,7 @@
                 <div class="form__block-title">Этаж</div>
                 <input placeholder="" type="number" name="floor" class="form__input" maxlength="3">
               </label>
-            </div> 
+            </div>
           </div>
           <div class="form__right">
             <div class="form__right-row">
@@ -589,6 +699,7 @@
       </nav>
     </aside>
   </div>
-  <script async src="./app.js"></script> 
+  <script async src="./app.js"></script>
 </body>
+
 </html>

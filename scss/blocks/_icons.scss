@@ -1,6 +1,31 @@
 .logo {
   width: rem(92px); 
   height: rem(69px);
+  //position: absolute;
+
+}
+
+.logo-pic {
+  width: rem(92px); 
+  height: rem(92px);
+  z-index: 9999;
+}
+
+.close {
+  @include flex-center;
+  width: 18px;
+  height: 18px;
+  background-image: url(../../img/icons/Rounded_Rectangle_1.svg);
+  cursor: pointer;
+}
+
+.comp-close {
+  @include flex-center;
+  width: 18px;
+  height: 18px;
+  background-image: url(../../img/icons/Rounded_Rectangle_2.svg);
+  stroke: $orange2;
+  cursor: pointer;
 }
 
 .drops {
@@ -12,6 +37,19 @@
   width: rem(29px);
   height: rem(14px);
 }
+
+.left-scroll {
+  width: rem(29px);
+  height: rem(14px);
+  transform: rotate(90deg);
+}
+
+.right-scroll {
+  width: rem(29px);
+  height: rem(14px);
+  transform: rotate(-90deg);
+}
+
 
 .meat {
   width: rem(97px); 
@@ -29,14 +67,50 @@
 }
 
 .burger {
-  width: rem(46px);
-  height: rem(44px);
+  width: 46px;
+  height: 44px;
+  opacity: 1;
 }
 
 .kkal {
   width: rem(60px);
   height: rem(60px);
+  opacity: .5;
 }
+
+.beef {
+  width: rem(44px);
+  height: rem(39px);
+}
+
+.buns {
+  width: rem(48px);
+  height: rem(30px);
+}
+
+.salad {
+  width: rem(38px);
+  height: rem(38px);
+}
+
+.sauce {
+  width: rem(41px);
+  height: rem(43px);
+  stroke: $orange;
+  fill: $orange;
+}
+
+.cucumber {
+  width: rem(43px);
+  height: rem(37px);
+}
+
+.cheese {
+  width: rem(39px);
+  height: rem(34px);
+}
+
+
 
 .map-marker {
   width: rem(46px);

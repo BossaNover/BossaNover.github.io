@@ -1,22 +1,32 @@
 .nav {
   max-width: rem(670px);
-
+  position: relative; // добавили это свойство для выравнивания nav__close
+  
   @include tablets {
     display: none;
   }
-}
-
-.nav__list {
-  @include flex-between-wrap;   // ПОЧЕМУ ЗДЕСЬ НЕ РАБОТАЕТ WRAP?
-  font-size: rem(13px);          // при сжатии до ширины 480px  бэкграунд вываливается из окна. 
-  color: $white;
-  text-transform: uppercase;
+  
+  &__list {
        
- // @include tablets {
- //   display: none;  
- // }
+    @include flex-between-wrap;   // ПОЧЕМУ ЗДЕСЬ НЕ РАБОТАЕТ WRAP?
+    font-size: rem(13px);          // при сжатии до ширины 480px  бэкграунд вываливается из окна. 
+    color: $white;
+    text-transform: uppercase;
+        // @include tablets {
+      //   display: none;  
+      // }
+  }
+  &__close {                     //это крестик, закрывающий полноэкранное меню (только для телефонов-планшетов)
+    position: absolute;
+    top: 31px;
+    right: 19px;
+    display: none;
+    @include tablets {
+      display: flex;
+    }
+  }
 }
-
+    
 .nav__item {
   display: flex;
   align-items: center;
@@ -29,7 +39,7 @@
     border-radius: 50%;
     margin-left: rem(15px);
     display: block;              // Почему это нужно?
-    background: $white;
+    background: $white;  
   }
 
   &:nth-first-child {
@@ -47,4 +57,9 @@
 
 .nav__link {
   text-decoration: none;
+  &_tablets {
+    @include tablets {
+      display: none;
+    } 
+  }
 }

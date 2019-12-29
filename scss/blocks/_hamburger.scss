@@ -4,7 +4,10 @@
   width: rem(24px);
   height: rem(22px);
   margin-left: rem(30px);
-  //display: none;     @include tablets { display: flex }; //отключаем, чтоб не видно было на десктопе
+  display: none;     
+  @include tablets { 
+    display: block; 
+  }; 
 }
 
 .hamburger-menu-link {
@@ -21,7 +24,7 @@
   border-radius: rem(3px);
   
   &:before, &:after {
-    background: $white;  // почему-то у меня рисуется только 2 полоски
+    background: $white;  
     width: 100%;
     height: rem(5px);
     border-radius: rem(3px);  
