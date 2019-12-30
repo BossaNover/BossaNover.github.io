@@ -54,12 +54,6 @@
   }
 }
 
-
 .nav__link {
   text-decoration: none;
-  &_tablets {
-    @include tablets {
-      display: none;
-    } 
-  }
 }

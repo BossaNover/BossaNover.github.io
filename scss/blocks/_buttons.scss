@@ -1,12 +1,10 @@
 .button {
   @include button; 
-  z-index: 9998;
-
+  
   &--order {
     text-decoration: none;
     background-color: $orange;
-    z-index: 9998;
-
+  
     &:hover {
       background-color: $dark-orange;
     }
@@ -33,10 +31,4 @@
       display: inline-block;
     } 
   }
-
 }
-
-
-
-
-

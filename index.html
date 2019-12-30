@@ -37,7 +37,7 @@
                   <a href="#" class="nav__link">Отзывы</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link nav__link_tablets">Как мы работаем</a>
+                  <a href="#" class="nav__link">Как мы работаем</a>
                 </li>
                 <li class="nav__item">
                   <a href="#" class="nav__link">Контакты</a>
@@ -162,13 +162,13 @@
     <section class="section burgers">
       <div class="container burgers__container">
         <div class="burgers-icons-sidebar">
-          <div class="burgers-comp">
+          <div class="burgers-comp" tabindex="0">               
             <svg class="burgers-comp__burger-icon">
               <use href='./img/icons/sprites.svg#burger' class="burger"></use>
             </svg>
             <div class="burgers-comp__title">состав</div>
           </div>
-          <div class="burgers-comp__hover">
+          <div class="burgers-comp__hover ">
             <ul class="burgers-comp__list">
               <li class="burgers-comp__item">
                 <svg class="burgers-comp__icons">
@@ -226,7 +226,7 @@
               </li>
             </ul>
             <div class="burgers-comp__close">
-              <a href="#" class="comp-close"></a>
+              <div class="comp-close"></div>    <!--здесь был a.href, но смысла в этом не вижу-->
             </div>
           </div>
           <div class="burgers-calories">

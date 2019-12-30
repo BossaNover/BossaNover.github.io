@@ -15,7 +15,7 @@
   @include flex-center;
   width: 18px;
   height: 18px;
-  background-image: url(../../img/icons/Rounded_Rectangle_1.svg);
+  background-image: url('../../img/icons/Rounded_Rectangle_1.svg');
   cursor: pointer;
 }
 
@@ -23,7 +23,7 @@
   @include flex-center;
   width: 18px;
   height: 18px;
-  background-image: url(../../img/icons/Rounded_Rectangle_2.svg);
+  background-image: url('../../img/icons/Rounded_Rectangle_2.svg');
   stroke: $orange2;
   cursor: pointer;
 }

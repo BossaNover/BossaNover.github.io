@@ -1,6 +1,6 @@
 .burgers {
   @include flex-center;
-  background: $yellow;
+  background: linear-gradient($yellow 0%, $orange-grad 50%, $yellow 100%);
   width: 100%;
 
   &__container {
@@ -16,16 +16,27 @@
     @include flex-between;
     flex-direction: column;
     height: 100%;
+    position: absolute;
+    left: 36px;
+    padding: 90px 0;
+
+    @include tablets {
+      flex-direction: row;
+      align-items: flex-start;
+      height: inherit;
+      width: 100%;
+      max-width: 470px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 115px;
+      padding: 0;
+    }
+
+    @include tablets {
+      top: 50px;
+    }
+
   }
-
-}
-
-.burgers-icons-sidebar {
-  position: absolute;
-  left: 36px;
-  padding: 90px 0;
-  @include flex-between;
-  flex-direction: column;
 }
 
 .burgers-comp {
@@ -42,20 +53,32 @@
 
 .burgers-comp__burger-icon {
   width: 46px;
-  height: 46px;
+  height: 44px;
+  fill: $white;
+  stroke: $white;
   display: flex;
   justify-content: center;
   opacity: 1;
 }
 
-.burgers-comp__title {
-  font-family: $font-title;
-  font-size: $f-size_text;
-  color: $white;  
+
+.burgers-comp:hover {
+  background: $orange2;
 }
 
-.burgers-comp{
+.burgers-comp:focus + .burgers-comp__hover { // работает только с tabindex="0"
+  height: 332px;
+}
+
+
+.burgers-comp {
   
+  &__title {
+    font-family: $font-title;
+    font-size: $f-size_text;
+    color: $white;  
+  }
+
   &__icons {
     width: 48px;
     height: 48px;
@@ -64,7 +87,6 @@
 
   &__hover {
     height: 0;
-    padding: 0;
     overflow: hidden;
     transition: .4s;
     position: relative;
@@ -75,32 +97,30 @@
     opacity: 90%;
     position: absolute;
     left: 100%;
-    z-index: 9999;
-  
+      
     @include tablets {
+      left: 19%;
       width: 321px;
-      height: 332px;
+      height: 0;
     }
     @include phones {
       width: 371px;
-      height: 332px;  
     }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    z-index: 9999;  
+    justify-content: center;  
+    padding: 10px 20px 20px;
   }
 
-  &:focus {
-    .burgers-comp__list {
-      height: 332px;
-      padding: 20px;
-    }
-  }
+ // &:hover {
+ //   .burgers-comp__list {
+ //     height: 332px;
+ //     padding: 20px;
+ //   }
+ // }
   
   &__item {
     display: flex;
@@ -124,17 +144,27 @@
     z-index: 9999;
   }
  
-  &__close {                     //это крестик, закрывающий полноэкранное меню (только для телефонов-планшетов)
+  &__close {             //это крестик, закрывающий полноэкранное меню (только для телефонов-планшетов)
     position: absolute;
     top: 20px;
     right: 20px;
-    //display: none;
+    display: none;
+    cursor: pointer;
+
     @include tablets {
       display: flex;
     }
+    
+    &:focus + .burgers-comp__hover { // такое не работает! Выпадашка закрывается при клике на любом поле.
+      height: 0;                        // это особенность :focus
+    }
+
+    &-pic {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
-
 
 
 .burgers-calories {
@@ -167,29 +197,63 @@
 .burgers-content {
   @include flex-center;
 
+  @include tablets {
+    flex-direction: column;
+  }
+
+  @include phones {
+    max-width: 80%;
+    padding-top: 12%;
+  }
+
+
+
   &__picture, &__desc {
     flex: 1;
   }
  
+  &__desc {
+    @include flex-center;
+    flex-direction: column;
+  }
+
   &__title {
     font-family: $font-title;
     font-size: $f-size_headtitle;
     color: $white;
     line-height: rem(64px); 
     margin-bottom: rem(56px);
+    
+    @include tablets {
+      max-width: 450px;
+      text-align: center;
+      margin-bottom: 50px;
+    } 
   }
+  
   &__text {
     @include text;
     line-height: rem(24px);
     margin-bottom: rem(6px);
+
+    @include tablets {
+      max-width: 565px;
+      text-align: center;
+    } 
   }
+
   &__price {
     font-family: $font-title;
     font-size: $f-size_headtitle;
     color: $orange2;
     letter-spacing: -1px;
+    position: relative;
+  
+    @include tablets {
+      transform: translateX(-25%);
+    }
   }
-
+ 
   &__price > span {
     font-size: 30px;
   }
@@ -197,9 +261,8 @@
 
 .burgers-content__button {
   position: absolute;
-  bottom: rem(133px);
-  right: rem(140px);
-  z-index: 9998;
+  bottom: 0;
+  right: -125px;
 }
 
 .burgers-left-scroll {
